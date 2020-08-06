@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>0805</title>
+     <style>
+     h1, h2 {
+       border: solid 1px black;
+       width: 200PX;
+       text-align: center;
+       background-color: #D3CFCF;
+       color: #ffffff;
+
+     }
+      #grid {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+     }
+/*h1과 id를 왜 따로 묶어 주어야 할까? 어차피 h1은 유일한데*/
+      #d {
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+     }
+
+@media(max-width:600px) {
+/*screen width <600px과 같은 말이다.*/
+h1, h2 {
+  border: none;
+}
+#d {
+ display: block;
+}
+#grid {
+ display: block;
+}
+}
+/*border는 none이고 display는 block*/
+      </style>
+  </head>
+  <body>
+   <div id="grid">
+      <h1>라인</h1>
+      <h1>컴퓨터</h1>
+      <h1>학원</h1>
+   </div>
+
+   <div id="d">
+     <h2>경기도</h2>
+     <h2>안산시</h2>
+     <h2>중앙동</h2>
+    </div>
+  </body>
+</html>
